@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> <title>FIM UAS</title>
+    <meta charset="UTF-8">
+    <title>FIM UAS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
             <a href="/">
-                <img src="logo-uas-1.webp" alt="UAS"> 
+                <img src="images/logo-uas-1.webp" alt="UAS"> 
             </a>
         </div>
-
-
+        <div class="logo">
+            <a href="/">
+                <img src="images/LOGO_FIM.png" alt="UAS"> 
+            </a>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo-2029.png" alt="UAS"> 
+            </a>
+        </div>
+        <h1>Universidad Autonoma de Sinaloa</h1> 
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Misión y Visión</a></li>
@@ -24,34 +34,53 @@
         </ul>
     </nav>
 
-    <aside class="sidebar-menu">
-  <div class="menu-header">
-    <h3>Menú <span>Principal</span></h3>
-  </div>
-  
-  <ul class="menu-list">
-    <li><a href="#">Dirección Escolar</a></li>
-    <li><a href="#">Servicios Académicos</a></li>
-    <li><a href="#">Programa de Tutorías</a></li>
-    <li><a href="#">Servicios Escolares</a></li>
-    <li><a href="#">Oferta Educativa</a></li>
-    <li><a href="#">Egresados</a></li>
-    
-    <li class="has-submenu">
-      <span class="submenu-title">Recursos Visuales</span>
-      <ul class="submenu">
-        <li><a href="#">Logo UAS</a></li>
-        <li><a href="#">Logo FIM</a></li>
-        <li><a href="#">Visión de Futuro 2029</a></li>
-      </ul>
-    </li>
+    <div class="main-content-layout">
+        
+        <aside class="sidebar-left">
+            <div class="menu-header">
+                <h3>Menú <span>Principal</span></h3>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#">Dirección Escolar</a></li>
+                <li><a href="#">Servicios Académicos</a></li>
+                <li><a href="#">Programa de Tutorías</a></li>
+                <li><a href="#">Servicios Escolares</a></li>
+                <li><a href="#">Oferta Educativa</a></li>
+                <li><a href="#">Egresados</a></li>
+                <li class="has-submenu">
+                    <span class="submenu-title">Recursos Visuales</span>
+                    <ul class="submenu">
+                        <li><a href="#">Logo UAS</a></li>
+                        <li><a href="#">Logo FIM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Convocatorias <span class="badge">1</span></a></li>
+                <li><a href="#">Bolsa de Trabajo</a></li>
+                <li><a href="#">Modelo educativo</a></li>
+                <li><a href="#">Reglamentacion</a></li>
+                <li><a href="#">Transparencia</a></li>
+                <li><a href="#">Certificacion</a></li>
+            </ul>
+        </aside>
 
-    <li><a href="#">Convocatorias <span class="badge">1</span></a></li>
-    <li><a href="#">Bolsa de Trabajo</a></li>
-    <li><a href="#">Modelo Educativo</a></li>
-    <li><a href="#">Transparencia</a></li>
-  </ul>
-</aside>
+        <main class="feed">
+            <section class="welcome-card">
+                <h1>Bienvenido a FIM UAS</h1>
+                <p>Selecciona una opción de los menús laterales para comenzar.</p>
+                <div style="height: 1000px; background: #f0f0f0; margin-top: 20px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: #999;">Área de contenido principal (Scroll habilitado)</p>
+                </div>
+            </section>
+        </main>
 
+        <aside class="sidebar-right">
+            <div class="calendar-card">
+                <h2>Calendario Escolar</h2>
+                <a href="https://www.uas.edu.mx/img/servicios/calendarios/mini-Calendario-2025-2026.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="images/mini-Calendario-2025-2026.jpg" alt="Calendario">
+                </a>
+            </div>
+        </aside>
+    </div>
 </body>
 </html>

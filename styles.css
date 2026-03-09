@@ -1,137 +1,217 @@
-.logo img {
-    height: 90px;
-    width: 90px;
-    display: block;
+/* 1. VARIABLES Y CONFIGURACIÓN BASE */
+:root {
+    --primary-blue: #1b29ea;
+    --accent-orange: #ee5205;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5; /* Color de fondo suave para resaltar las tarjetas */
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Contenedor principal */
+/* 2. NAVBAR (SUPERIOR) */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Separa el logo de los links */
+    justify-content: space-between;
     align-items: center;
-    background-color: #ea7c1b;
-    padding: 1rem 2rem;
-    color: white;       
-
+    background-color: var(--primary-blue);
+    padding: 0.5rem 2rem;
+    color: white;
+    position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Estilo de la lista */
+.logo img {
+    height: 80px; /* Ajustado para que no sea excesivo */
+    width: auto;
+    display: block;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espacio entre cada link */
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
-/* Estilo de los enlaces */
 .nav-links a {
     text-decoration: none;
     color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.3s;
 }
- 
+
 .nav-links a:hover {
-  color: #001eff; /* Color al pasar el mouse */
-}
-:root {
-  --primary-blue: #0056b3;
-  --bg-light: #f8f9fa;
-  --text-dark: #333;
-  --accent: #007bff;
+    color: var(--accent-orange);
 }
 
-.sidebar-menu {
-  width: 280px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  left: 20px; /* Lo posiciona a la derecha */
-  top: 10px;
+/* 3. LAYOUT PRINCIPAL (CONTENEDOR DE 3 COLUMNAS) */
+.main-content-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* 4. COLUMNA IZQUIERDA (MENÚ) */
+.sidebar-left {
+    flex: 0 0 280px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .menu-header {
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
 
 .menu-header h3 {
-  margin: 0;
-  font-weight: 400;
-  letter-spacing: 1px;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .menu-header span {
-  font-weight: 700;
-  text-transform: uppercase;
+    font-weight: 700;
 }
 
 .menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menu-list li a {
-  display: block;
-  padding: 12px 20px;
-  color: var(--text-dark);
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-  transition: all 0.3s ease;
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
 }
 
-/* Efecto Hover */
 .menu-list li a:hover {
-  background-color: var(--bg-light);
-  color: var(--accent);
-  padding-left: 25px; /* Pequeño desplazamiento */
-}
-
-/* Estilo para el Badge de notificaciones */
-.badge {
-  background: #ff4757;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 11px;
-  float: right;
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+    padding-left: 25px;
 }
 
 /* Submenú de Logotipos */
 .has-submenu {
-  background: #f1f3f5;
-  padding-bottom: 10px;
+    background: #f9f9f9;
 }
 
 .submenu-title {
-  display: block;
-  padding: 12px 20px 5px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #888;
-  text-transform: uppercase;
+    display: block;
+    padding: 10px 20px 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #888;
+    text-transform: uppercase;
 }
 
 .submenu {
-  list-style: none;
-  padding-left: 15px;
+    list-style: none;
+    padding: 0 0 10px 15px;
 }
 
 .submenu li a {
-  border: none;
-  font-size: 14px;
-  padding: 8px 20px;
+    border: none;
+    font-size: 0.9rem;
+    padding: 6px 20px;
+}
+
+.badge {
+    background: #ff4757;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    float: right;
+}
+
+/* 5. COLUMNA CENTRAL (CONTENIDO) */
+.feed {
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    min-height: 600px;
+}
+
+.welcome-card h1 {
+    color: var(--primary-blue);
+    margin-top: 0;
+}
+
+/* 6. COLUMNA DERECHA (CALENDARIO) */
+.sidebar-right {
+    flex: 0 0 260px;
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 100px;
+}
+
+.calendar-card {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.calendar-card h2 {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+
+.calendar-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.calendar-card img:hover {
+    transform: scale(1.03);
+}
+
+/* 7. RESPONSIVE (PARA CELULARES) */
+@media (max-width: 1024px) {
+    .main-content-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sidebar-left, .sidebar-right, .feed {
+        width: 100%;
+        max-width: 600px;
+        flex: none;
+    }
+
+    .sidebar-right {
+        position: static; /* Quita el sticky en móviles */
+    }
 }
